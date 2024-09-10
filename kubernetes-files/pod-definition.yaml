@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+#->To create a pod with nginx image with yaml
+#kubectl create -f pod-definition.yaml
+#kubectl apply -f pod-definition.yaml
+#->TO get pods
+#kubectl get pods
+#->To create a pod with nginx image
+#kubectl run ngpod --image=nginx
+#->To see the information about pod
+#kubectl describe pod <pod-name>
+#->To create a manifest file, use kubectl run command
+#kubectl run <pod-name> --image=<imagename> --dry-run=client -o yaml > redis.yaml(manifestfile name)
+# Delete a pod using the type and name specified in pod.json
+#kubectl delete -f pod.yaml
+# Delete a pod
+# kubectl delete pod <pod-name>
+# Delete all pods
+# kubectl delete pods --all
+
